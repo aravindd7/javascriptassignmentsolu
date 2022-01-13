@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="./scripts/main.js" defer></script>
+</head>
+
+<body>
+    <div class="container__root border--solid">
+        <!--Menu-->
+        <div class="container__menu border--solid">
+            <ul class="container--row">
+                <li><button style="margin-left: 1vw;" id="btn__addTask">Add Task</span></li>
+                <li><span style="margin-right: 5vw; margin-left: 5vw;">| To-Do Drag and Drop App |</span></li>
+                <li><input id="search--task" type="text"></li>
+                <li><button id="btnsearch">Search</button></li>
+                <li>
+                    <label for="sortby">Sort By</label>
+                    <select name="Sort By" id="sortby">
+                        <option>Priority</option>
+                        <option>Date</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="searchby">Search By</label>
+                    <select name="Search By" id="searchby">
+                        <option>Office</option>
+                        <option>Friend</option>
+                        <option>Home</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="filterby">Filter By</label>
+                    <select name="Filter By" id="filterby">
+                        <option>All</option>
+                        <option>Top 3</option>
+                    </select>
+                </li>
+                <li><button id="reset">Reset</button></li>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Kanban -->
+        <div class="container__kanban container--column" id="list__todo">
+            <ul id="list__todo">
+            </ul>
+        </div>
+
+        <!--Modal-->
+        <div id="myModal" class="modal">
+
+            <div class="content__modal container--column">
+                <p>Name</p>
+                <input name="Name" id="task--name">
+                <label for="task--category">Select Category</label>
+                <select style="margin-bottom: 20px;" name="Select Category" id="task--category">
+                    <option>Home</option>
+                    <option>Office</option>
+                    <option>Friend</option>
+                </select>
+                <label for="birthday">Due Date:</label>
+                <input type="date" id="task--due" name="Due Date:">
+                <button id="btn__addTask--modal">Add Task</button>
+                <button id="btn--closeModal">Cancel</button>
+            </div>
+        </div>
+        <div id="modalSub" class="modalSubTask">
+            <div class="container--column">
+                <input name="Name" id="subtask--name">
+                <button id="btn__addSubTask--modal">Add</button>
+                <button id="btn--closeSubModal">Cancel</button>
+            </div>
+        </div>
+        <div id="modalEdit" class="modalEditTask">
+            <div class="container--column">
+                <input name="Name" id="edittask--name">
+                <select style="margin-bottom: 20px;" name="Select Category" id="task__edit--category">
+                    <option>Home</option>
+                    <option>Office</option>
+                    <option>Friend</option>
+                </select>
+                <input type="date" id="task__edit--due" name="Due Date:">
+                <button id="btn--EditModal">Edit</button>
+                <button id="btn--closeEditModal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
